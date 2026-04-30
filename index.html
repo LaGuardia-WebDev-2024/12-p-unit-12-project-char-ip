@@ -21,12 +21,30 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+
+    <center>
+    <br><br>
+    <img src= "header.png" style="width: 750px;">
+    <br><br><br>
+    </center>
+    <p>
+     Cor Laboratories has been using <a>Multipurpose Occupational Systems Analysis Inventory - Close-Ended</a> (MOSAIC) methodology for more than two decades to ensure a level of capability within the workforce. MOSAIC, a multipurpose, survey-based occupational analysis approach, is used to collect information from incumbents and supervisors on many occupations for a wide range of human resource management functions. <br>
+     A competency is a measurable pattern of knowledge, skills, abilities, behaviors, and other characteristics that an individual needs to perform work roles or occupational functions successfully. <br><br>
+     
+     Competencies specify the "how" of performing job tasks, or what the person needs to do the job successfully. <br><br>
+
+     Complete the test.
+
+    </p>
+
+    <h1>Prerequisite Competency Test</h1>
     <hr />
+
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
+        <br>
         <select id="movie-answer">
           <option value="movie1">movie 1</option>
           <option value="movie2">movie 2</option>
@@ -36,10 +54,11 @@ Select ONE Additional Feature to Add
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
-    <div id="movie-result">
+    <div id="input-box">
       <p id="movie-text"></p>
     </div>
     <hr />
+
     <!-- Book Question -->
     <form id="book-form">
       <label>
@@ -57,6 +76,11 @@ Select ONE Additional Feature to Add
       <p id="book-text"></p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+
+
+
     <script>
       
       //========================Movie Question jQuery Code
