@@ -1,6 +1,6 @@
 <!-- Unit 12 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[ ! ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
 [  ] Include Three Images
@@ -28,53 +28,125 @@ Select ONE Additional Feature to Add
     <br><br><br>
     </center>
     <p>
-     Cor Laboratories has been using <a>Multipurpose Occupational Systems Analysis Inventory - Close-Ended</a> (MOSAIC) methodology for more than two decades to ensure a level of capability within the workforce. MOSAIC, a multipurpose, survey-based occupational analysis approach, is used to collect information from incumbents and supervisors on many occupations for a wide range of human resource management functions. <br>
+     <b>COR INDUSTRIES</b> has been using <a>Multipurpose Occupational Systems Analysis Inventory - Close-Ended</a> (MOSAIC) methodology for more than two decades to ensure a level of capability within the workforce. MOSAIC, a multipurpose, survey-based occupational analysis approach, is used to collect information from incumbents and supervisors on many occupations for a wide range of human resource management functions. <br>
      A competency is a measurable pattern of knowledge, skills, abilities, behaviors, and other characteristics that an individual needs to perform work roles or occupational functions successfully. <br><br>
      
      Competencies specify the "how" of performing job tasks, or what the person needs to do the job successfully. <br><br>
 
-     Complete the test.
+     <mark> <b> Complete the test. </b> </mark>
+     <br>
+     <br>
+     <br>
+     <br>
 
     </p>
 
-    <h1>Prerequisite Competency Test</h1>
+    <h1><i>= Prerequisite Competency Test =========== </i></h1>
     <hr />
 
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- q1 Question -->
+    <form id="q1-form">
       <label>
-        🎥 What is my favorite movie?
+        What is the first thing you do before entering the West Wing?
         <br>
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        <select id="q1-answer">
+          <option value="q11"> [ ] Use your company issued worker ID in to open the door.</option>
+          <option value="q12"> [ ] Complete a sterilization cycle.</option>
+          <option value="q13"> [ ] Hand in your worker's manual and journal for inspection.</option>
+          <option value="q14"> [ ] Equip a clean pair of gloves, then retrieve your clipboard from the side closet. </option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <br>
+      <button type="submit">Submit Answer</button>
     </form>
     <div id="input-box">
-      <p id="movie-text"></p>
+      <p id="q1-text"></p>
     </div>
     <hr />
 
-    <!-- Book Question -->
-    <form id="book-form">
+    <!-- q2 Question -->
+    <form id="q2-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        What is your Worker ID?
+        <br>
+        <select id="q2-answer">
+          <option value="q21"> [ ] 9087-08.</option>
+          <option value="q22"> [ ] 1230-08.</option>
+          <option value="q23"> [ ] 4372-08.</option>
+          <option value="q24"> [ ] 1238-08.</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <br>
+      <button type="submit">Check q2 Answer</button>
     </form>
-    <div id="book-result">
-      <p id="book-text"></p>
+    <div id="input-box">
+      <p id="q2-text"></p>
     </div>
+
+    <hr />
+
+    <!-- q3 Question -->
+    <form id="q3-form">
+      <label>
+        What is an 08?
+        <br>
+        <select id="q3-answer">
+          <option value="q31"> [ ] Internship.</option>
+          <option value="q32"> [ ] Entry level.</option>
+          <option value="q33"> [ ] Year 1.</option>
+          <option value="q34"> [ ] Manager.</option>
+        </select>
+      </label>
+      <br>
+      <button type="submit">Check q3 Answer</button>
+    </form>
+    <div id="input-box">
+      <p id="q3-text"></p>
+    </div>
+
+    <hr />
+
+    <!-- q4 Question -->
+    <form id="q4-form">
+      <label>
+        Eden is...
+        <br>
+        <select id="q4-answer">
+          <option value="q41"> [ ] Our founder's legacy. </option>
+          <option value="q42"> [ ] The garden. </option>
+          <option value="q44"> [ ] Ressurection. </option>
+          <option value="q44"> [ ] Immoral.</option>
+        </select>
+      </label>
+      <br>
+      <button type="submit">Check q4 Answer</button>
+    </form>
+    <div id="input-box">
+      <p id="q4-text"></p>
+    </div>
+
+    <hr />
+
+    <!-- q5 Question -->
+    <form id="q5-form">
+      <label>
+        📖 What is my favorite q5?
+        <br>
+        <select id="q5-answer">
+          <option value="q51">q5 1</option>
+          <option value="q52">q5 2</option>
+          <option value="q54">q5 4</option>
+          <option value="q54">q5 4</option>
+        </select>
+      </label>
+      <br>
+      <button type="submit">Check q5 Answer</button>
+    </form>
+    <div id="input-box">
+      <p id="q5-text"></p>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 
@@ -83,33 +155,78 @@ Select ONE Additional Feature to Add
 
     <script>
       
-      //========================Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //========================q1 Question jQuery Code
+      $("#q1-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#q1-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "q11") {
+          $("#q1-text").text("Proceed.");
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#q1-text").text("Wrong.");
         }
       });
 
-      //=======================Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      //=======================q2 Question jQuery Code
+      $("#q2-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#q2-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+        if (answer === "q23") {
+          $("#q2-text").text("Proceed.");
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#q2-text").text("Wrong.");
+        }
+      });
+
+      //=======================q3 Question jQuery Code
+      $("#q3-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#q3-answer");
+        var answer = $answer.val();
+
+        if (answer === "q32") {
+          $("#q3-text").text("Proceed.");
+        } 
+        else {
+          $("#q3-text").text("Wrong.");
+        }
+      });
+
+      //=======================q4 Question jQuery Code
+      $("#q4-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#q4-answer");
+        var answer = $answer.val();
+
+        if (answer === "q41") {
+          $("#q4-text").text("Proceed.");
+        } 
+        else {
+          $("#q4-text").text("Wrong.");
+        }
+      });
+
+      //=======================q5 Question jQuery Code
+      $("#q5-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#q5-answer");
+        var answer = $answer.val();
+
+        if (answer === "q54") {
+          $("#q5-text").text("Proceed.");
+        } 
+        else {
+          $("#q5-text").text("Wrong.");
         }
       });
       
